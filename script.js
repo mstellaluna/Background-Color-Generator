@@ -3,14 +3,24 @@ var body = document.getElementById("gradient")
 var color1 = document.querySelector(".color1")
 var color2 = document.querySelector(".color2")
 
+//displays default CSS RGBA values for linear-gradient
+
+function currentSettings() {
+    var CSSprop = window.getComputedStyle(body,null).getPropertyValue("background-image")
+   // console.log(CSSprop)
+    css.textContent = CSSprop
+   
+}
+currentSettings()
+
+//retrievs the select dropdown value 
+
 function directionChange(select) {
     var selectedOption = select.options[select.selectedIndex]
     var selectedText = selectedOption.text
     console.log(selectedText)
     return setGradient(selectedText)
 }
-
-
 
 function setGradient(gradDir){
     body.style.background = 
