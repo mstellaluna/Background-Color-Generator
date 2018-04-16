@@ -14,15 +14,6 @@ function currentSettings() {
 
 currentSettings()
 
-
-function directionChange(select) {
-    var selectedOption = select.options[select.selectedIndex]
-    var selectedText = selectedOption.text
-  //  console.log(selectedText)
-    return setGradient(selectedText)
-}
-
-
 function returnColor(){
   
   body.style.background = 
